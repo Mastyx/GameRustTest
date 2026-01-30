@@ -18,7 +18,7 @@ async fn main() {
         }
         // setting Camera3D (position, target, up ...)
         set_camera(&Camera3D {
-            position: vec3(10., 0., 10.),
+            position: vec3(0., 5., 20.),
             target: vec3(0., 0., 0.),
             up: vec3(0., 1., 0.),
             ..Default::default()
@@ -26,8 +26,10 @@ async fn main() {
 
         // insert object
         draw_text("Hello World", 10.0, 20.0, 20.0, BLACK);
-        draw_cube_wires(vec3(0., 0., 0.), vec3(2., 2., 2.), RED);
-        draw_grid(30, -1., DARKGRAY, DARKGRAY);
+
+        draw_cube_wires(vec3(1., 3., 5.), vec3(1., 1., 1.), RED);
+
+        draw_grid(15, 1., DARKGRAY, YELLOW);
         next_frame().await;
     }
 }
